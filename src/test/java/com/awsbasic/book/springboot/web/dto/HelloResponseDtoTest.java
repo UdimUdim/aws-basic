@@ -1,6 +1,5 @@
 package com.awsbasic.book.springboot.web.dto;
 
-import com.awsbasic.book.springboot.web.web.dto.*;
 import org.junit.*;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
