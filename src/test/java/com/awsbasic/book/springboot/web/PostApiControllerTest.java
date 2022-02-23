@@ -1,7 +1,8 @@
-package com.awsbasic.book.springboot.web.dto;
+package com.awsbasic.book.springboot.web;
 
 
 import com.awsbasic.book.springboot.domain.*;
+import com.awsbasic.book.springboot.web.dto.*;
 import org.apache.coyote.*;
 import org.junit.*;
 import org.junit.runner.*;
@@ -31,10 +32,10 @@ public class PostApiControllerTest {
     @Autowired
     private PostsRepository postsRepository;
 
-    @After
-    public void tearDown() throws Exception{
-        postsRepository.deleteAll();
-    }
+//    @After
+//    public void tearDown() throws Exception{
+//        postsRepository.deleteAll();
+//    }
 
     @Test
     public void Posts_등록된다() throws Exception{

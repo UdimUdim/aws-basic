@@ -5,9 +5,11 @@ import com.awsbasic.book.springboot.web.service.*;
 import lombok.*;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.*;
+
 @RequiredArgsConstructor
 @RestController
-public class PostApiController {
+public class PostsApiController {
 
     private final PostsService postsService;
 
@@ -26,5 +28,15 @@ public class PostApiController {
         return postsService.update(id, requestDto);
     }
 
+    @GetMapping("/api/v1/posts/list")
+    public List<PostsListResponseDto> findAll(){
+        return postsService.findAllDesc();
+    }
+
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id){
+        postsService.delete(id);
+        return id;
+    }
 
 }
