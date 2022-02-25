@@ -1,7 +1,9 @@
 package com.awsbasic.book.springboot.web.dto;
 
 import com.awsbasic.book.springboot.domain.*;
+import lombok.*;
 
+@Getter
 public class PostsResponseDto {
 
     private Long id;
@@ -11,6 +13,7 @@ public class PostsResponseDto {
 
     public PostsResponseDto(Posts entity) {
         this.id = entity.getId();
+        this.title = entity.getTitle();
         this.content = entity.getContent();
         this.author = entity.getAuthor();
     }
